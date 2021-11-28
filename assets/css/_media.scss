@@ -20,31 +20,42 @@
 
     .navbar{
 
-        .content{
-            justify-content: center;
+        &.scrolled{
+            .navbar-nav{
+                top: 88px;
+            }
+        }
+
+        .hamburger{
+            display: block !important;
         }
 
         .navbar-nav{
-            position: fixed;
-            bottom: 0;
-            left: 0;
+            position: absolute;
+            top: 100px;
+            right: -100%;
+            transition: all .3s linear;
             width: 100%;
+            height: 100vh;
             background-color: #fff;
-            box-shadow: 0px 0px 10px rgba($color: #3D2C8D , $alpha: .2);
+            flex-direction: column !important;
+            justify-content: flex-start;
+            text-align: center;
+            align-content: center;
 
-            .nav-item{
-                margin: 0px;
-                width: calc(100% / 4);
-                .nav-link{
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    i{
-                        margin: 0px 0px 5px 0px !important;
-                    }
-                }
+            &.acitve-nav{
+                right: 0px !important;
             }
+
+            li{
+                margin: 10px 0px !important;
+
+                a{
+                    justify-content: center;
+                }
+
+            }
+            
         }
     }
 

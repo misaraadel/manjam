@@ -4,7 +4,7 @@
 header{
     width: 100%;
     padding: 200px 0px 100px 0px;
-    background-color: #3D2C8D;
+    background-color: #782B90;
     position: relative;
     z-index: 99;
 
@@ -45,6 +45,12 @@ header{
             margin-bottom: 40px;
             text-align: justify;
         }
+
+        .custom-btn{
+            &::after{
+                background-color: #43ADC1 !important;
+            }
+        }
     }
 
     .image-content{
@@ -68,7 +74,7 @@ header{
         height: 100%;
         background-color: #f8f8f8;
         border-radius: 20px;
-        box-shadow: 0px 0px 10px rgba($color: #3D2C8D , $alpha: .2);
+        box-shadow: 0px 0px 10px rgba($color: #782B90 , $alpha: .2);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,7 +90,7 @@ header{
             position: absolute !important;
             width: 100%;
             height: 0%;
-            background-color: #3D2C8D;
+            background-color: #782B90;
             top: 0;
             left: 0;
             right: 0;
@@ -103,7 +109,7 @@ header{
                 height: 100%;
                 object-position: center;
                 object-fit: contain;
-                filter: invert(16%) sepia(75%) saturate(2508%) hue-rotate(241deg) brightness(86%) contrast(94%);
+               filter: invert(63%) sepia(75%) saturate(338%) hue-rotate(142deg) brightness(83%) contrast(90%);
             }
         }
 
@@ -141,7 +147,7 @@ header{
 
             .box-content{
                 h4{
-                    color: #F3950D;
+                    color: #43ADC1;
                 }
 
                 p{
@@ -190,7 +196,7 @@ header{
         justify-content: center;
 
         h4{
-            color: #3D2C8D;
+            color: #782B90;
             font-size: 25px;
             font-weight: 800;
             margin: 0px;
@@ -221,125 +227,117 @@ header{
     width: 100%;
     padding: 40px 0px;
 
-    .form{
-        overflow: hidden;
-        padding-top: 20px;
+    .box-data{
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        .from-group{
+        .box{
             width: 100%;
-            height: 50px;
+            padding: 30px 15px;
+            height: 100%;
+            background-color: #f8f8f8;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba($color: #782B90 , $alpha: .2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            transition: all .3s linear;
+            overflow: hidden;
+            z-index: 99;
             position: relative;
-            margin-bottom: 5px;
-
-            .form-control{
+    
+            &::after{
+                content: '';
+                position: absolute !important;
                 width: 100%;
-                height: 100%;
-                color:#808080;
-                padding: 0px  10px !important;
-                background-color: #fff;
-                border: none;
-
-                &:focus, 
-                &:valid{
-
-                    &+ .label{
-                        border: none;
-                        .label-content{
-                           transform: translateY(-80%);
-                           color: #3D2C8D;
-                        }
-                        &::after{
-                            transform: scaleX(1);
-                        }
-                        &::before{
-                            transform: scaleY(1);
-                        }
-                    }
-                }
-            }
-            .label{
-                position: absolute;
+                height: 0%;
+                background-color: #782B90;
+                top: 0;
+                left: 0;
+                right: 0;
                 bottom: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                margin: 0px;
-                border-radius: 25px;
-                border: 1px solid #808080;
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    bottom: 0px;
-                    top: 0px;
+                z-index: -1;
+                transition: all .4s linear;
+            }
+    
+            .image-content{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 25px;
+    
+                img{
                     width: 100%;
-                    border-radius: 25px;
                     height: 100%;
-                    border-top: 1px solid #3D2C8D;
-                    border-bottom: 1px solid #3D2C8D;
-                    transform: scaleX(0);
-                    transition: all .4s ease;
-                }
-
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top:0;
-                    bottom: 0;
-                    right: 0px;
-                    border-radius: 25px;
-                    left: 0px;
-                    height: 100%;
-                    width: 100%;
-                    border-right: 1px solid #3D2C8D;
-                    border-left: 1px solid #3D2C8D;
-                    transform: scaleY(0);
-                    transition: all .4s ease;
-                }
-
-                .label-content{
-                    position: absolute;
-                    bottom: 5px;
-                    right: 10px;
-                    padding: 5px;
-                    transition: all .3s ease;
-                    background-color: #fff !important;
-                    z-index: 99 !important;
-                    color: #808080;
+                    object-position: center;
+                    object-fit: contain;
+                   filter: invert(63%) sepia(75%) saturate(338%) hue-rotate(142deg) brightness(83%) contrast(90%);
                 }
             }
-
-            &.textarea{
-                height: 100px;
-
-                .form-control{
-                    padding-top: 20px !important;
-                    resize: none;
+    
+            .box-content{
+                width: 100%;
+    
+                h4{
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: 900;
+                    margin-bottom: 20px;
                 }
-
-                .label{
-                    height: 100px;
-
-                    .label-content{
-                        bottom: unset;
-                        top: 10px;
+    
+                a{
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    color: #888;
+                    font-size: 15px;
+                    font-weight: 500;
+    
+                    &:last-child{
+                        margin: 0px;
+                    }
+                }
+    
+                p{
+                    color: #808080;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    margin: 0px;
+                }
+            }
+    
+            &:hover{
+                &::after{
+                    height: 100%;
+                }
+    
+                .image-content{
+                    animation: pulse .4s linear;
+                    
+                    img{
+                        filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(12deg) brightness(103%) contrast(103%);
+                    }
+                }
+    
+                .box-content{
+                    h4{
+                        color: #43ADC1;
+                    }
+    
+                    p , a{
+                        color: #fff;
                     }
                 }
             }
-        }
-
-        .custom-btn{
-            width: 99% !important;
-            border: none;
-            outline: none;
-            margin: auto !important;
         }
     }
+
+    
 
     .image-content{
         img{

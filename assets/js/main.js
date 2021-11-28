@@ -20,11 +20,16 @@ $(document).ready(function () {
         }, 100);
     });
 
-    $('.nav-button').click(function(){
-        $('.mobile-nav').addClass('active-nav');
+    $('.hamburger').click(function(){
+        $('.hamburger').toggleClass('active');
+        $('.navbar-nav').toggleClass('acitve-nav');
+        $('body').toggleClass('overflowNone')
     });
-    $('.mobile-close').click(function(){
-        $('.mobile-nav').removeClass('active-nav');
+
+    $('.nav-link').click(function(){
+        $('.hamburger').removeClass('active');
+        $('.navbar-nav').removeClass('acitve-nav');
+        $('body').removeClass('overflowNone')
     });
 
     $('.owl-header').owlCarousel({

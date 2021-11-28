@@ -88,7 +88,7 @@ ul{
 .custom-btn{
     padding: 8px 20px;
     color: #fff;
-    background-color: #000957;
+    background-color: #43ADC1;
     font-weight: 500;
     font-size: 16px;
     border-radius: 40px;
@@ -108,7 +108,7 @@ ul{
         align-content: center;
         justify-content: center;
         text-align: center;
-        background-color: #000957;
+        background-color: #43ADC1;
         color: #fff;
         transition: .5s;
         transform-origin: bottom;
@@ -126,7 +126,7 @@ ul{
         align-content: center;
         justify-content: center;
         text-align: center;
-        background-color: #f7941d;
+        background-color: #782B90;
         color: #fff;
         transition: .5s;
         transform-origin: top;
@@ -148,7 +148,7 @@ ul{
     margin-bottom: 40px;
 
     h4{
-        color: #1C0C5B;
+        color: #782B90;
         font-size: 30px;
         font-weight: 800;
         margin-bottom: 20px;
@@ -174,7 +174,7 @@ ul{
 
     &.scrolled{
         padding: 4px 0px;
-        box-shadow: 0px 0px 10px rgba($color: #3D2C8D, $alpha: .2);
+        box-shadow: 0px 0px 10px rgba($color: #782B90, $alpha: .2);
 
         .brand-img{
             height: 60px;
@@ -187,6 +187,44 @@ ul{
         align-items: center;
         justify-content: space-between;
         align-content: center;
+
+        .hamburger{
+            display: none;
+
+            .line{
+                width: 30px;
+                height: 3px;
+                background-color: #14a3b4;
+                display: block;
+                margin: 8px auto;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &.active{
+                transition: all 0.3s ease-in-out;
+                transition-delay: 0.6s;
+                transform: rotate(45deg);
+                
+                .line{
+                    &:nth-child(2){
+                        width: 0px;
+                    }
+
+                    &:nth-child(3), 
+                    &:nth-child(1){
+                        transition-delay: 0.3s;
+                    }
+
+                    &:nth-child(1){
+                        transform: translateY(6.5px);
+                    }
+
+                    &:nth-child(3){
+                        transform: translateY(-15px) rotate(90deg);
+                    }
+                }
+            }
+        }
 
         .brand-name{
 
@@ -217,12 +255,12 @@ ul{
 
                     i{
                         font-size: 18px;
-                        color: #C996CC;
+                        color: #43ADC1;
                         margin-left: 10px;
                     }
 
                     span{
-                        color: #1C0C5B;
+                        color: #43ADC1;
                         font-size: 18px;
                         font-weight: 700;
                     }
@@ -235,7 +273,7 @@ ul{
 footer{
     width: 100%;
     padding: 50px 0px;
-    background-color: rgba($color: #3D2C8D , $alpha: .059);
+    background-color: rgba($color: #782B90 , $alpha: .059);
     background-size: cover !important;
     background-repeat: no-repeat !important;
     position: relative;
@@ -293,7 +331,7 @@ footer{
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
-                    border: 1px solid #3D2C8D;
+                    border: 1px solid #782B90;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -303,7 +341,7 @@ footer{
                     overflow: hidden;
 
                     i{
-                        color: #3D2C8D;
+                        color: #782B90;
                         font-size: 20px;
                         transition: all .8s linear;
                     }
@@ -316,7 +354,7 @@ footer{
                         top: 0;
                         left: 0;
                         border-radius: 0%;
-                        background-color: #3D2C8D;
+                        background-color: #782B90;
                         z-index: -1;
                         transform: scale(0);
                         transition: all .5s linear;
@@ -346,7 +384,7 @@ footer{
     position: fixed;
     bottom: 10px;
     left: 10px;
-    background-color: #3D2C8D;
+    background-color: #782B90;
     display: flex;
     justify-content: center;
     align-items: center;
