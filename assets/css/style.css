@@ -1242,6 +1242,7 @@ header .image-content img {
 
 .about-us {
   width: 100%;
+  padding-top: 40px;
 }
 
 .about-us .box {
@@ -1551,6 +1552,21 @@ header .image-content img {
 
 .contact .box-data .box:hover .box-content p, .contact .box-data .box:hover .box-content a {
   color: #fff;
+}
+
+.contact .image-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact .image-content img {
