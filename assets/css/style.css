@@ -1590,9 +1590,30 @@ header .image-content img {
   .mobile-img {
     height: 350px !important;
   }
+  header {
+    padding-top: 130px !important;
+  }
   header img {
     -o-object-position: bottom !important;
        object-position: bottom !important;
+  }
+  header .content {
+    text-align: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .navbar.scrolled .navbar-nav {
     top: 88px;

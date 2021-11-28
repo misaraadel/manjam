@@ -13,8 +13,19 @@
     }
 
     header{
+        padding-top: 130px !important;
+
         img{
             object-position: bottom !important;
+        }
+
+        .content{
+            text-align: center !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
     }
 
